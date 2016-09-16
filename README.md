@@ -23,6 +23,7 @@ I only tested it on Linux, but it would probably work on Windows with MSYS2 and 
 Run the `ogl` executable in the build directory.
 
 The default controls are:
+
 * Left/Right arrow keys to move the shape
 * Up/Down to scale
 * B/N to rotate left/right
@@ -34,4 +35,3 @@ The program creates a `config.cfg` file in the working directory. You can modify
 ## License
 
 MIT.
-
