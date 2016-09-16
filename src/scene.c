@@ -29,8 +29,8 @@ Scene* scene_create(char* wdowName, int width, int height)
 		return NULL;
 	}
 	
-	//opengl version 4.3
-	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 4);
+	//opengl version 3.3
+	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
 	SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 3);
 	if(SDL_GL_SetAttribute(SDL_GL_CONTEXT_PROFILE_MASK, SDL_GL_CONTEXT_PROFILE_CORE) < 0)	printf("Erreur : %s\n", SDL_GetError());
 	
@@ -38,8 +38,7 @@ Scene* scene_create(char* wdowName, int width, int height)
 	wdow = SDL_CreateWindow(wdowName, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN | SDL_WINDOW_OPENGL);
 	ctxt = SDL_GL_CreateContext(wdow);
 	
-	//on n'utilise pas GLEW pour l'instant
-	/*Chargement des fonctions OpenGL avec GLEW
+	//Chargement des fonctions OpenGL avec GLEW
 	GLenum ginit = glewInit();
 	if(ginit != GLEW_OK)
 	{
@@ -48,7 +47,9 @@ Scene* scene_create(char* wdowName, int width, int height)
 		SDL_Quit();
 		return NULL;
 	}
-	*/
+	//GLEW provoque une erreur GL, on la consomme ici.
+	glGetError();
+	
 	
 	if(ctxt == NULL)
 	{

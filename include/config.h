@@ -1,7 +1,7 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
-#include <SDL2/SDL.h>
+#include "SDL.h"
 #include <stdio.h>
 #include "lexutil.h"
 //longueur maximale d'un indentificateur, en comptant le \0

@@ -28,7 +28,7 @@ static GLsizei	vtCount,
 		
 const GLchar* VertexShader =
 {
-    "#version 400\n"\
+    "#version 330\n"\
  
     "layout(location=0) in vec3 in_Position;\n"\
     /*"layout(location=1) in vec4 in_Color;\n"\*/
@@ -44,7 +44,7 @@ const GLchar* VertexShader =
 
 const GLchar* FragmentShader =
 {
-    "#version 400\n"\
+    "#version 330\n"\
  
     "in vec4 ex_Color;\n"\
     "out vec4 out_Color;\n"\

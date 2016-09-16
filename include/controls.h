@@ -1,6 +1,6 @@
 #ifndef CONTROLS_H
 #define CONTROLS_H
-#include <SDL2/SDL.h>
+#include "SDL.h"
 #include "config.h"
 
 /*Controles au clavier/souris ou autres.

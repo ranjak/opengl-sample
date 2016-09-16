@@ -4,9 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
-#define GL_GLEXT_PROTOTYPES
-#include <GL/glcorearb.h>
-#include <SDL2/SDL.h>
+//#define GL_GLEXT_PROTOTYPES
+//#include <GL/glcorearb.h>
+#include <GL/glew.h>
+#include "SDL.h"
 #include "mathutil.h"
 
 #define SCENE_MAX_TITLE_LG 50
